@@ -16,7 +16,6 @@ copyright.textContent = `© ${new Date().getFullYear()} National Taiwan Universi
 navToggle.addEventListener('click', () => {
   const isActive = navLinks.classList.toggle('active');
   navToggle.classList.toggle('active');
-  // Ensure accessibility
   navToggle.setAttribute('aria-expanded', isActive);
 });
 
@@ -48,7 +47,6 @@ navItems.forEach(link => {
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const email = contactForm.querySelector('input[type="email"]').value;
-  // Placeholder for form submission logic
   alert(`Contact form submitted with email: ${email}`);
   contactForm.reset();
 });
@@ -99,12 +97,36 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Initialize visible sections on page load
+// Initialize visible sections and accordion on page load
 document.addEventListener('DOMContentLoaded', () => {
+  // Fade-in sections
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     if (window.scrollY >= sectionTop - window.innerHeight / 1.5) {
       section.classList.add('visible');
     }
+  });
+
+  // Accordion functionality
+  const headers = document.querySelectorAll('.accordion-header');
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const isActive = header.classList.contains('active');
+
+      // Close all other sections
+      document.querySelectorAll('.accordion-header').forEach(h => {
+        h.classList.remove('active');
+        h.setAttribute('aria-expanded', 'false');
+        h.nextElementSibling.classList.remove('active');
+      });
+
+      // Toggle current section
+      if (!isActive) {
+        header.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+        content.classList.add('active');
+      }
+    });
   });
 });
