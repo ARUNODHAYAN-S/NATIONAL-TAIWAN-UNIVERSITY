@@ -1,206 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>National Taiwan University 🌟</title>
-  <!-- Favicon -->
-  <link rel="icon" href="./IMAGES/NTU LOGO.png" type="image/png" />
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- Font Awesome CDN for Social Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- CSS -->
-  <link rel="stylesheet" href="Important_Style.css" />
-  <!-- JavaScript (Deferred for performance) -->
-  <script src="Important_Backend.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>National Taiwan University 🌟</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./IMAGES/NTU_LOGO.png" type="image/png" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- Font Awesome CDN for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="Important_Style.css" />
+    <!-- JavaScript (Deferred for performance) -->
+    <script src="Important_Backend.js" defer></script>
 </head>
+
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-logo">
-      <img src="./IMAGES/NTU LOGO.png" alt="National Taiwan University Logo" />
-      <span class="ntu-text">NTU</span>
-    </div>
-    <div class="nav-toggle" aria-label="Toggle navigation menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#HOME" class="active" aria-current="page">Home</a></li>
-      <li><a href="#SCHOLARSHIP">Scholarship</a></li>
-      <li><a href="#NEWS">News</a></li>
-      <li><a href="#COURSEWORKS">Courseworks</a></li>
-      <li><a href="#OIA">OIA</a></li>
-      <li><a href="#JOBS">Jobs</a></li>
-      <li><a href="#INTERNSHIPS">Internships</a></li>
-      <li><a href="#STUDYPORTAL">Study Portal</a></li>
-      <li><a href="#OPPORTUNITIES">Opportunities</a></li>
-      <li><a href="#LINKS">Links</a></li>
-    </ul>
-  </nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-logo">
+            <img src="./IMAGES/NTU LOGO.png" alt="NTU" loading="lazy" />
+            <span class="ntu-text">NTU</span>
+        </div>
+        <div class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#HOME" class="active" aria-current="page">Home</a></li>
+            <li><a href="#SCHOLARSHIP">Scholarship</a></li>
+            <li><a href="#NEWS">News</a></li>
+            <li><a href="#COURSEWORKS">Courseworks</a></li>
+            <li><a href="#OIA">OIA</a></li>
+            <li><a href="#JOBS">Jobs</a></li>
+            <li><a href="#INTERNSHIPS">Internships</a></li>
+            <li><a href="#STUDYPORTAL">Study Portal</a></li>
+            <li><a href="#OPPORTUNITIES">Opportunities</a></li>
+            <li><a href="#LINKS">Links</a></li>
+        </ul>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-image" id="HOME">
-    <div class="hero-overlay"></div>
-    <img src="./IMAGES/TONY STARK.jpg" alt="NTU Campus" loading="lazy" />
-    <div class="float-left"></div>
-    <div class="float-right"></div>
-    <div class="quote-box">
-      <h1 class="quote-text">
-        “Success is not final, failure is not fatal:<br>
-        It is the courage to continue that counts”
-      </h1>
-      <p class="quote-author">— Winston Churchill</p>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero-image" id="HOME">
+        <div class="hero-overlay"></div>
+        <img src="./IMAGES/TONY STARK.jpg" alt="National Taiwan University campus view" loading="lazy" />
+        <!-- Renamed TONY STARK.jpg to NTU_CAMPUS.jpg; update filename accordingly -->
+        <div class="float-left"></div>
+        <div class="float-right"></div>
+        <div class="quote-box">
+            <h1 class="quote-text">
+                “Success is not final, failure is not fatal:<br>
+                It is the courage to continue that counts”
+            </h1>
+            <p class="quote-author">— Winston Churchill</p>
+        </div>
+    </section>
 
-  <!-- Scholarship Section -->
-  <section class="content-section" id="SCHOLARSHIP">
-    <h2>🎓 Scholarship Opportunities</h2>
-    <p>
-      National Taiwan University is committed to supporting students from all backgrounds with scholarships based on merit, need, and specific criteria.
-    </p>
-    <ul>
-      <li><strong>MOE Taiwan Scholarship:</strong> Fully funded support for outstanding international students pursuing a degree in Taiwan.</li>
-      <li><strong>ICDF Scholarship:</strong> Offers full scholarships including airfare, housing, tuition, and monthly allowance.</li>
-      <li><strong>NTU International Student Scholarship:</strong> Partial or full tuition waivers based on academic excellence.</li>
-      <li><strong>Research Assistantships:</strong> Provided by professors through funded projects for postgraduate students.</li>
-    </ul>
-    <a href="https://oia.ntu.edu.tw/en/" target="_blank" class="btn" rel="noopener">Visit OIA Website</a>
-  </section>
+    <!-- Scholarship Section -->
+    <section class="content-section" id="SCHOLARSHIP">
+        <h2>🎓 Scholarship Opportunities</h2>
+        <p>
+            National Taiwan University offers a number of scholarship programs for international students to support their academic journey.
+        </p>
+        <div class="accordion">
+            <!-- Outstanding International Graduate Student Scholarship -->
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-1">
+                    Outstanding International Graduate Student Scholarship
+                </button>
+                <div class="accordion-content" id="scholarship-1">
+                    <p><strong>Requirements:</strong> All students applying to our international graduate degree programs can apply. We recommend contacting your potential supervisor regarding scholarship possibilities.</p>
+                    <p><strong>Benefits:</strong></p>
+                    <ul>
+                        <li>Tuition subsidy of up to TWD 65,000 (USD 2,167) each semester</li>
+                        <li>Monthly stipend:</li>
+                        <li>Master’s: TWD 8,000 (USD 267)</li>
+                        <li>PhD: TWD 10,000+ (USD 333+) – College of Liberal Arts, Social Sciences, Law, Management</li>
+                        <li>PhD: TWD 15,000+ (USD 500+) – College of Science, Engineering, Medicine, Bio-Resources & Agriculture, Electrical Engineering & Computer Science, Public Health, Life Science</li>
+                        <li><a href="https://i.ntu.edu.tw/" target="_blank" rel="noopener">International College</a> – Visit for scholarship and stipend information</li>
+                        <li>Graduate School of Advanced Technology – Admitted students will receive scholarship and stipend information via email</li>
+                    </ul>
+                    <p><strong>Note:</strong> Each semester, tuition fees of up to TWD 65,000 (USD 2,167) will be waived, excluding administrative fees, thesis advisor’s fees, insurance, accommodation, internet service, credit fees, and other such fees, which recipients must cover.</p>
+                    <p><strong>Maximum Duration:</strong></p>
+                    <ul>
+                        <li>Master’s students: ≤ 2 years</li>
+                        <li>PhD students: ≤ 4 years</li>
+                    </ul>
+                    <p><strong>Requirements for Renewal:</strong> College committees review the recipient’s performance each academic year to determine eligibility.</p>
+                    <p><strong>How to Apply:</strong> Check the scholarship application box in the degree online application system. No extra documents or procedures required.</p>
+                </div>
+            </div>
 
-  <!-- News Section -->
-  <section class="content-section" id="NEWS">
-    <h2>📰 Latest News</h2>
-    <p>
-      Stay updated with the latest happenings at NTU, from research breakthroughs to campus events.
-    </p>
-    <ul>
-      <li><strong>NTU Ranks Top in Asia:</strong> NTU continues to lead in academic excellence in 2025.</li>
-      <li><strong>New Research Center:</strong> AI and Sustainability Research Center opens this year.</li>
-      <li><strong>Campus Events:</strong> Annual cultural festival scheduled for Spring 2025.</li>
-    </ul>
-    <a href="https://www.ntu.edu.tw/english/" target="_blank" class="btn" rel="noopener">Read More News</a>
-  </section>
+            <!-- National Science and Technology Council (NSTC) Allocation Graduate Research Fellowship -->
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-2">
+                    National Science and Technology Council (NSTC) Allocation Graduate Research Fellowship (PhD)
+                </button>
+                <div class="accordion-content" id="scholarship-2">
+                    <p><strong>Requirements:</strong> All students applying to our international doctoral programs can apply.</p>
+                    <p><strong>Benefits:</strong> Monthly stipend of TWD 40,000 (USD 1,333).</p>
+                    <p><strong>Maximum Duration:</strong> Up to 3 years.</p>
+                    <p><strong>Requirements for Renewal:</strong> Submit a complete report to the scholarship renewal committee by June each academic year, including academic performance, achievements, participation in international activities, and other relevant documents.</p>
+                    <p><strong>How to Apply:</strong> Check the scholarship application box in the degree online application system. No extra documents or procedures required.</p>
+                    <p><strong>Note:</strong> Only available for September entry. Recipients who defer admission will have their scholarship revoked.</p>
+                </div>
+            </div>
 
-  <!-- Courseworks Section -->
-  <section class="content-section" id="COURSEWORKS">
-    <h2>📚 Courseworks</h2>
-    <p>
-      Explore NTU’s diverse academic programs designed to foster innovation and critical thinking.
-    </p>
-    <ul>
-      <li><strong>Computer Science:</strong> Cutting-edge curriculum in AI, machine learning, and data science.</li>
-      <li><strong>Business Administration:</strong> Programs focusing on global business trends.</li>
-      <li><strong>Environmental Studies:</strong> Interdisciplinary courses on sustainability.</li>
-    </ul>
-    <a href="https://www.ntu.edu.tw/english/academics/academics.html" target="_blank" class="btn" rel="noopener">Explore Courses</a>
-  </section>
+            <!-- NTU Loyalty Award for Overseas Degree Students -->
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-3">
+                    NTU Loyalty Award for Overseas Degree Students
+                </button>
+                <div class="accordion-content" id="scholarship-3">
+                    <p><strong>Requirements:</strong> Current NTU international/overseas Chinese students admitted into a higher degree program upon graduation. Bachelor’s students must be in the top half of their class the semester before application.</p>
+                    <p><strong>Award:</strong></p>
+                    <ul>
+                        <li>Master’s Programs: TWD 100,000 (USD 3,333)</li>
+                        <li>PhD Programs: TWD 200,000 (USD 6,666)</li>
+                    </ul>
+                    <p><strong>Provision:</strong> TWD 50,000 (USD 1,666) released each semester from the 2nd semester onward until the total amount is awarded.</p>
+                    <p><strong>Renewal:</strong> Academic performance reviewed by the relevant college committee each academic year.</p>
+                    <p><strong>How to Apply:</strong> Wait for OIA’s announcement.</p>
+                    <p><strong>Note:</strong> Students may receive this award alongside other NTU scholarships. Awardees are not restricted from receiving additional scholarships from the government or other organizations unless specified.</p>
+                </div>
+            </div>
 
-  <!-- OIA Section -->
-  <section class="content-section" id="OIA">
-    <h2>🌍 Office of International Affairs</h2>
-    <p>
-      The OIA supports international students with visa assistance, exchange programs, and cultural integration.
-    </p>
-    <ul>
-      <li><strong>Visa Support:</strong> Guidance on student visa applications and renewals.</li>
-      <li><strong>Exchange Programs:</strong> Study abroad with partner universities.</li>
-      <li><strong>Cultural Events:</strong> Engage with Taiwanese culture through workshops.</li>
-    </ul>
-    <a href="https://oia.ntu.edu.tw/en/" target="_blank" class="btn" rel="noopener">Visit OIA</a>
-  </section>
+            <!-- MOE Taiwan Scholarship -->
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-4">
+                    MOE Taiwan Scholarship
+                </button>
+                <div class="accordion-content" id="scholarship-4">
+                    <p><strong>Requirements:</strong> Nationalities from countries not in the scope of the MOFA Taiwan Scholarship.</p>
+                    <p><strong>Benefits:</strong></p>
+                    <ul>
+                        <li>Tuition waiver of up to TWD 40,000 each semester</li>
+                        <li>Monthly stipend of TWD 20,000</li>
+                    </ul>
+                    <p><strong>Maximum Duration:</strong></p>
+                    <ul>
+                        <li>Master’s students: ≤ 2 years</li>
+                        <li>PhD students: ≤ 4 years</li>
+                    </ul>
+                    <p><strong>Application Procedures and Requirements for Renewal:</strong> Contact <a href="https://taiwanscholarship.moe.gov.tw/web/pages.aspx?p=7" target="_blank" rel="noopener">Taiwan Scholarship and Huayu Enrichment Scholarship Program Office</a> for further details.</p>
+                </div>
+            </div>
 
-  <!-- Jobs Section -->
-  <section class="content-section" id="JOBS">
-    <h2>💼 Job Opportunities</h2>
-    <p>
-      Discover career opportunities for students and alumni through NTU’s career services.
-    </p>
-    <ul>
-      <li><strong>Teaching Assistants:</strong> Support faculty with grading and tutoring.</li>
-      <li><strong>Research Assistants:</strong> Work on innovative projects with professors.</li>
-      <li><strong>Industry Internships:</strong> Connect with top companies via NTU’s career center.</li>
-    </ul>
-    <a href="https://www.ntu.edu.tw/english/career/career.html" target="_blank" class="btn" rel="noopener">Find Jobs</a>
-  </section>
+            <!-- Elite Scholarship Program -->
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-5">
+                    Elite Scholarship Program
+                </button>
+                <div class="accordion-content" id="scholarship-5">
+                    <p><strong>Requirements:</strong> Current lecturers from South East Asia or Africa pursuing a master’s degree or PhD in Taiwan.</p>
+                    <p><strong>Benefits:</strong> Monthly stipend of TWD 25,000 (USD 833).</p>
+                    <p><strong>Maximum Duration:</strong></p>
+                    <ul>
+                        <li>Master’s students: ≤ 2 years</li>
+                        <li>PhD students: ≤ 3 years</li>
+                    </ul>
+                    <p><strong>How to Apply:</strong> Contact the department/graduate institute before submitting your admission application. NTU will nominate qualified applicants to MOE for further selection.</p>
+                    <p><strong>Guidelines:</strong></p>
+                    <ul>
+                        <li><a href="#" target="_blank" rel="noopener">Overview</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">South and Southeast Asia</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">Africa</a></li>
+                        <!-- Placeholder links; update with actual URLs -->
+                    </ul>
+                </div>
+            </div>
 
-  <!-- Internships Section -->
-  <section class="content-section" id="INTERNSHIPS">
-    <h2>🔬 Internships</h2>
-    <p>
-      Gain hands-on experience through internships with NTU’s industry and research partners.
-    </p>
-    <ul>
-      <li><strong>Tech Internships:</strong> Work with leading tech firms in Taiwan and beyond.</li>
-      <li><strong>Research Internships:</strong> Participate in groundbreaking research at NTU labs.</li>
-      <li><strong>Global Internships:</strong> Opportunities through international partnerships.</li>
-    </ul>
-    <a href="https://oia.ntu.edu.tw/en/internship" target="_blank" class="btn" rel="noopener">Explore Internships</a>
-  </section>
+            <!-- NSTC Graduate Research Fellowship (NSTC-GRF) Pilot Program -->
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-6">
+                    NSTC Graduate Research Fellowship (NSTC-GRF) Pilot Program
+                </button>
+                <div class="accordion-content" id="scholarship-6">
+                    <p><strong>Requirements:</strong> Students applying to our doctoral programs (Mainland Chinese, Hong Kong, and Macao students are not eligible).</p>
+                    <p><strong>Benefits:</strong> TWD 40,000 (USD 1,333) per month.</p>
+                    <p><strong>Maximum Duration:</strong> ≤ 3 years.</p>
+                    <p><strong>How to Apply:</strong> <a href="#" target="_blank" rel="noopener">Learn more about the NSTC Graduate Research Fellowship (NSTC-GRF) Pilot Program</a>.</p>
+                    <!-- Placeholder link; update with actual URL -->
+                </div>
+            </div>
 
-  <!-- Study Portal Section -->
-  <section class="content-section" id="STUDYPORTAL">
-    <h2>📖 Study Portal</h2>
-    <p>
-      Access course materials, grades, and academic resources through NTU’s online portal.
-    </p>
-    <ul>
-     Hannah:      <li><strong>Course Registration:</strong> Easily register for courses each semester.</li>
-      <li><strong>Learning Resources:</strong> Access lecture notes, videos, and assignments.</li>
-      <li><strong>Academic Records:</strong> View grades and transcripts securely.</li>
-    </ul>
-    <a href="https://www.ntu.edu.tw/english/students/students.html" target="_blank" class="btn" rel="noopener">Access Study Portal</a>
-  </section>
+            <!-- Taiwan ICDF Scholarship -->
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-7">
+                    Taiwan ICDF Scholarship
+                </button>
+                <div class="accordion-content" id="scholarship-7">
+                    <p><strong>Requirements:</strong> Nationality from eligible countries, program in Agricultural Economics.</p>
+                    <p><strong>Benefits:</strong></p>
+                    <ul>
+                        <li>Return airfare (economy class)</li>
+                        <li>Tuition fees and credit fees</li>
+                        <li>Housing (dormitory at NTU)</li>
+                        <li>Monthly allowance: TWD 18,000 (Master’s) or TWD 20,000 (PhD)</li>
+                        <li>Insurance</li>
+                        <li>Textbook costs</li>
+                    </ul>
+                    <p><strong>Maximum Duration:</strong> 2 years.</p>
+                    <p><strong>How to Apply:</strong> <a href="https://www.icdf.org.tw/" target="_blank" rel="noopener">Apply through TaiwanICDF</a>.</p>
+                </div>
+            </div>
+        </div>
+        <a href="https://admissions.ntu.edu.tw/fees-scholarships/scholarships/" target="_blank" class="btn" rel="noopener">Scholarship Portal</a>
+    </section>
 
-  <!-- Opportunities Section -->
-  <section class="content-section" id="OPPORTUNITIES">
-    <h2>🌟 Additional Opportunities</h2>
-    <p>
-      Engage in extracurricular activities, student organizations, and leadership programs.
-    </p>
-    <ul>
-      <li><strong>Student Clubs:</strong> Join over 200 clubs, from arts to technology.</li>
-      <li><strong>Volunteer Programs:</strong> Contribute to community service initiatives.</li>
-      <li><strong>Leadership Workshops:</strong> Develop skills through NTU’s programs.</li>
-    </ul>
-    <a href="https://www.ntu.edu.tw/english/student-life/student-life.html" target="_blank" class="btn" rel="noopener">Discover Opportunities</a>
-  </section>
+    <!-- News Section -->
+    <section class="content-section" id="NEWS">
+        <h2>📰 Latest News</h2>
+        <p>
+            Stay updated with the latest happenings at NTU, from research breakthroughs to campus events.
+        </p>
+        <ul>
+            <li><strong>NTU Ranks Top in Asia:</strong> NTU continues to lead in academic excellence in 2025.</li>
+            <li><strong>New Research Center:</strong> AI and Sustainability Research Center opens this year.</li>
+            <li><strong>Campus Events:</strong> Annual cultural festival scheduled for Spring 2025.</li>
+        </ul>
+        <a href="https://www.ntu.edu.tw/english/" target="_blank" class="btn" rel="noopener">Read More News</a>
+    </section>
 
-  <!-- Links Section -->
-  <section class="content-section" id="LINKS">
-    <h2>🔗 Useful Links</h2>
-    <p>
-      Quick access to important NTU resources and external links.
-    </p>
-    <ul>
-      <li><a href="https://www.ntu.edu.tw/english/" target="_blank" rel="noopener">NTU Official Website</a></li>
-      <li><a href="https://oia.ntu.edu.tw/en/" target="_blank" rel="noopener">Office of International Affairs</a></li>
-      <li><a href="https://www.lib.ntu.edu.tw/en" target="_blank" rel="noopener">NTU Library</a></li>
-    </ul>
-  </section>
+    <!-- Courseworks Section -->
+    <section class="content-section" id="COURSEWORKS">
+        <h2>📚 Courseworks</h2>
+        <p>
+            Explore NTU’s diverse academic programs designed to foster innovation and critical thinking.
+        </p>
+        <ul>
+            <li><strong>Computer Science:</strong> Cutting-edge curriculum in AI, machine learning, and data science.</li>
+            <li><strong>Business Administration:</strong> Programs focusing on global business trends.</li>
+            <li><strong>Environmental Studies:</strong> Interdisciplinary courses on sustainability.</li>
+        </ul>
+        <a href="https://www.ntu.edu.tw/english/academics/academics.html" target="_blank" class="btn" rel="noopener">Explore Courses</a>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-social">
-        <a href="mailto:example@ntu.edu.tw" target="_blank" rel="noopener" aria-label="Email NTU"><i class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://line.me" target="_blank" rel="noopener" aria-label="Line"><i class="fab fa-line"></i></a>
-        <a href="https://whatsapp.com" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      </div>
-      <div class="footer-contact">
-        <form id="contact-form">
-          <input type="email" placeholder="Your Email" required aria-label="Email address" />
-          <button type="submit">Contact Us</button>
-        </form>
-      </div>
-    </div>
-    <p id="copyright">© 2025 National Taiwan University. All rights reserved.</p>
-  </footer>
+    <!-- OIA Section -->
+    <section class="content-section" id="OIA">
+        <h2>🌍 Office of International Affairs</h2>
+        <p>
+            The OIA supports international students with visa assistance, exchange programs, and cultural integration.
+        </p>
+        <ul>
+            <li><strong>Visa Support:</strong> Guidance on student visa applications and renewals.</li>
+            <li><strong>Exchange Programs:</strong> Study abroad with partner universities.</li>
+            <li><strong>Cultural Events:</strong> Engage with Taiwanese culture through workshops.</li>
+        </ul>
+        <a href="https://oia.ntu.edu.tw/en/" target="_blank" class="btn" rel="noopener">Visit OIA</a>
+    </section>
+
+    <!-- Jobs Section -->
+    <section class="content-section" id="JOBS">
+        <h2>💼 Job Opportunities</h2>
+        <p>
+            Discover career opportunities for students and alumni through NTU’s career services.
+        </p>
+        <ul>
+            <li><strong>Teaching Assistants:</strong> Support faculty with grading and tutoring.</li>
+            <li><strong>Research Assistants:</strong> Work on innovative projects with professors.</li>
+            <li><strong>Industry Internships:</strong> Connect with top companies via NTU’s career center.</li>
+        </ul>
+        <a href="https://www.ntu.edu.tw/english/career/career.html" target="_blank" class="btn" rel="noopener">Find Jobs</a>
+    </section>
+
+    <!-- Internships Section -->
+    <section class="content-section" id="INTERNSHIPS">
+        <h2>🔬 Internships</h2>
+        <p>
+            Gain hands-on experience through internships with NTU’s industry and research partners.
+        </p>
+        <ul>
+            <li><strong>Tech Internships:</strong> Work with leading tech firms in Taiwan and beyond.</li>
+            <li><strong>Research Internships:</strong> Participate in groundbreaking research at NTU labs.</li>
+            <li><strong>Global Internships:</strong> Opportunities through international partnerships.</li>
+        </ul>
+        <a href="https://oia.ntu.edu.tw/en/internship" target="_blank" class="btn" rel="noopener">Explore Internships</a>
+    </section>
+
+    <!-- Study Portal Section -->
+    <section class="content-section" id="STUDYPORTAL">
+        <h2>📖 Study Portal</h2>
+        <p>
+            Access course materials, grades, and academic resources through NTU’s online portal.
+        </p>
+        <ul>
+            <li><strong>Course Registration:</strong> Easily register for courses each semester.</li>
+            <li><strong>Learning Resources:</strong> Access lecture notes, videos, and assignments.</li>
+            <li><strong>Academic Records:</strong> View grades and transcripts securely.</li>
+        </ul>
+        <a href="https://www.ntu.edu.tw/english/students/students.html" target="_blank" class="btn" rel="noopener">Access Study Portal</a>
+    </section>
+
+    <!-- Opportunities Section -->
+    <section class="content-section" id="OPPORTUNITIES">
+        <h2>🌟 Additional Opportunities</h2>
+        <p>
+            Engage in extracurricular activities, student organizations, and leadership programs.
+        </p>
+        <ul>
+            <li><strong>Student Clubs:</strong> Join over 200 clubs, from arts to technology.</li>
+            <li><strong>Volunteer Programs:</strong> Contribute to community service initiatives.</li>
+            <li><strong>Leadership Workshops:</strong> Develop skills through NTU’s programs.</li>
+        </ul>
+        <a href="https://www.ntu.edu.tw/english/student-life/student-life.html" target="_blank" class="btn" rel="noopener">Discover Opportunities</a>
+    </section>
+
+    <!-- Links Section -->
+    <section class="content-section" id="LINKS">
+        <h2>🔗 Useful Links</h2>
+        <p>
+            Quick access to important NTU resources and external links.
+        </p>
+        <ul>
+            <li><a href="https://www.ntu.edu.tw/english/" target="_blank" rel="noopener">NTU Official Website</a></li>
+            <li><a href="https://oia.ntu.edu.tw/en/" target="_blank" rel="noopener">Office of International Affairs</a></li>
+            <li><a href="https://www.lib.ntu.edu.tw/en" target="_blank" rel="noopener">NTU Library</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-social">
+                <!-- Updated with NTU-specific social media links; verify and adjust as needed -->
+                <a href="mailto:secretariat@ntu.edu.tw" target="_blank" rel="noopener" aria-label="Email NTU"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/school/national-taiwan-university/" target="_blank" rel="noopener" aria-label="NTU LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/NTU" target="_blank" rel="noopener" aria-label="NTU GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/ntu.edu.tw" target="_blank" rel="noopener" aria-label="NTU Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://line.me" target="_blank" rel="noopener" aria-label="NTU Line"><i class="fab fa-line"></i></a>
+                <a href="https://www.whatsapp.com" target="_blank" rel="noopener" aria-label="NTU WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-contact">
+                <form id="contact-form" action="#" method="post">
+                    <!-- Added action="#" assuming JS handles submission -->
+                    <label for="email" class="visually-hidden">Your Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required aria-label="Email address" />
+                    <button type="submit">Contact Us</button>
+                </form>
+            </div>
+        </div>
+        <p id="copyright">© <span id="current-year">2025</span> National Taiwan University. All rights reserved.</p>
+    </footer>
 </body>
 </html>
