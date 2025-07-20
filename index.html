@@ -3,346 +3,1839 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>National Taiwan University 🌟</title>
+    <meta name="description" content="Unveil the pinnacle of elegance and academic excellence at National Taiwan University." />
+    <meta name="keywords" content="National Taiwan University, NTU, scholarships, international students, Taiwan education, excellence" />
+    <meta name="author" content="National Taiwan University" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="National Taiwan University" />
+    <meta property="og:description" content="Experience the timeless elegance and innovation of National Taiwan University." />
+    <meta property="og:image" content="./IMAGES/NTU LOGO.png" />
+    <meta property="og:url" content="https://www.ntu.edu.tw/" />
+    <meta property="og:type" content="website" />
+    <title>National Taiwan University🚀</title>
+
     <!-- Favicon -->
-    <link rel="icon" href="./IMAGES/NTU_LOGO.png" type="image/png" />
+    <link rel="icon" href="./IMAGES/NTU LOGO.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./IMAGES/NTU LOGO.png" />
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
-    <!-- Font Awesome CDN for Social Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="Important_Style.css" />
-    <!-- JavaScript (Deferred for performance) -->
-    <script src="Important_Backend.js" defer></script>
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Inline CSS -->
+    <style>
+        :root {
+            --primary-color: #e8b923;
+            --secondary-color: #0a1128;
+            --accent-color: #034078;
+            --text-color: #1a1a1a;
+            --light-text: #f5f5f5;
+            --dark-bg: #000000;
+            --transition-speed: 0.4s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            line-height: 1.8;
+            background-color: #f5f5f5;
+            color: var(--text-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(10, 17, 40, 0.95), rgba(27, 38, 59, 0.95));
+            padding: 0.8rem 3rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(12px);
+            height: 70px;
+            transition: all 0.5s ease;
+            border-bottom: 1px solid rgba(232, 185, 35, 0.2);
+        }
+
+        .navbar.scrolled {
+            height: 60px;
+            padding: 0.5rem 2rem;
+            background: rgba(10, 17, 40, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .nav-logo img {
+            height: 40px;
+            margin-right: 1rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            will-change: transform;
+            filter: drop-shadow(0 0 5px rgba(232, 185, 35, 0.5));
+        }
+
+        .nav-logo img:hover {
+            transform: rotate(5deg) scale(1.1);
+            filter: drop-shadow(0 0 10px var(--primary-color));
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light-text);
+            text-shadow: 0 0 10px rgba(232, 185, 35, 0.5);
+            letter-spacing: 1px;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .navbar.scrolled .logo-text {
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 1.5rem;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-family: 'EB Garamond', serif;
+            font-weight: 500;
+            padding: 0.5rem 0.8rem;
+            transition: all var(--transition-speed) ease;
+            will-change: transform, color;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--light-text);
+            transition: all 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+            transform-origin: center;
+            box-shadow: 0 0 5px rgba(232, 185, 35, 0.5);
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+            background-color: var(--primary-color);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+            background-color: var(--primary-color);
+        }
+
+        .nav-toggle:hover span {
+            background-color: var(--primary-color);
+        }
+    .popup-link {
+    background-color: #ffeb3b;
+    color: #000 !important;
+    border: 1px solid #ffc107;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.popup-link:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(241, 239, 239, 0.918);
+    z-index: 10;
+}
+
+.popup-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,235,59,0.3);
+    z-index: -1;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.popup-link:hover::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+        /* Student Ticker Styles */
+        .student-ticker {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, rgba(10, 17, 40, 0.95), rgba(27, 38, 59, 0.95));
+            color: var(--primary-color);
+            padding: 0.8rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 999;
+            border-bottom: 1px solid rgba(232, 185, 35, 0.3);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(0);
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
+
+        .student-ticker.hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        .ticker-content {
+            white-space: nowrap;
+            animation: ticker-scroll 60s linear infinite;
+            font-family: 'EB Garamond', serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 5px rgba(232, 185, 35, 0.3);
+        }
+
+        .ticker-label {
+            color: var(--light-text);
+            font-weight: 600;
+            margin-right: 0.3rem;
+        }
+
+        .ticker-close {
+            background: transparent;
+            border: none;
+            color: var(--light-text);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0.3rem;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ticker-close:hover {
+            color: var(--primary-color);
+            background: rgba(232, 185, 35, 0.2);
+            transform: rotate(90deg);
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Adjust for scrolled navbar */
+        .navbar.scrolled ~ .student-ticker {
+            top: 60px;
+        }
+
+        /* Hero Section */
+        .hero-image {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            will-change: transform;
+            filter: brightness(0.7);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 17, 40, 0.7) 0%, rgba(10, 17, 40, 0.3) 100%);
+            z-index: 0;
+        }
+
+        .hero-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="white" opacity="0.8"/><circle cx="50" cy="30" r="1" fill="white" opacity="0.6"/><circle cx="80" cy="20" r="1.5" fill="white" opacity="0.9"/><circle cx="10" cy="50" r="1" fill="white" opacity="0.5"/><circle cx="40" cy="60" r="1.2" fill="white" opacity="0.7"/><circle cx="70" cy="70" r="1" fill="white" opacity="0.4"/><circle cx="90" cy="90" r="1.3" fill="white" opacity="0.8"/></svg>');
+            background-size: 200px 200px;
+            animation: twinkle 8s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+
+        .quote-box {
+            position: relative;
+            text-align: center;
+            color: var(--light-text);
+            z-index: 1;
+            max-width: 90%;
+            padding: 2rem;
+            background: rgba(10, 17, 40, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(232, 185, 35, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+                        inset 0 0 20px rgba(232, 185, 35, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 1s ease;
+        }
+
+        .quote-box.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 4px 10px rgba(0, 0, 0, 0.4);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e8b923 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .quote-author {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            font-weight: 500;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .quote-author::before,
+        .quote-author::after {
+            content: '~';
+            position: relative;
+            margin: 0 10px;
+            color: var(--light-text);
+            opacity: 0.7;
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(232, 185, 35, 0.8);
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: float linear infinite;
+            will-change: transform;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: linear-gradient(135deg, var(--secondary-color), var(--dark-bg));
+            padding: 4rem 2rem;
+            color: var(--light-text);
+            position: relative;
+        }
+
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M30,30 Q50,10 70,30 T90,30" fill="none" stroke="rgba(232,185,35,0.05)" stroke-width="1"/></svg>');
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* AI Assistant Styles */
+        .ai-assistant {
+            background: rgba(10, 17, 40, 0.7);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(232, 185, 35, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .ai-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .ai-header i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+
+        .ai-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .deadline-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .deadline-list li {
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            background: rgba(232, 185, 35, 0.1);
+            border-left: 3px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .deadline-list li:hover {
+            background: rgba(232, 185, 35, 0.2);
+            transform: translateX(5px);
+        }
+
+        .ai-input {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        .ai-input input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(232, 185, 35, 0.3);
+            color: var(--light-text);
+            font-family: 'EB Garamond', serif;
+            font-size: 1rem;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .ai-input button {
+            padding: 0 1.5rem;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            font-family: 'EB Garamond', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .ai-input button:hover {
+            background: #f5c542;
+        }
+
+        .deadline-result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(232, 185, 35, 0.1);
+            border-radius: 5px;
+            display: none;
+        }
+
+        /* Accordion Styles */
+        .info-accordion {
+            width: 100%;
+        }
+
+        .accordion-item {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: rgba(10, 17, 40, 0.8);
+            border: none;
+            color: var(--light-text);
+            font-family: 'EB Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .accordion-header:hover {
+            background: rgba(10, 17, 40, 0.9);
+        }
+
+        .accordion-header i:first-child {
+            margin-right: 1rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .accordion-header i.fa-chevron-down {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active i.fa-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            background: rgba(27, 38, 59, 0.7);
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+
+        .accordion-content.open {
+            padding: 1.5rem;
+            max-height: 5000px;
+        }
+
+        /* Info Box Styles */
+        .info-box {
+            background: rgba(10, 17, 40, 0.5);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(232, 185, 35, 0.2);
+            overflow: hidden;
+        }
+
+        .box-header {
+            padding: 1rem 1.5rem;
+            background: rgba(232, 185, 35, 0.1);
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .box-header i {
+            margin-right: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .box-content {
+            padding: 1.2rem 1.5rem;
+        }
+
+        .box-content p {
+            margin-bottom: 0.8rem;
+        }
+
+        .box-content strong {
+            color: var(--primary-color);
+        }
+
+        /* Highlight Box Styles */
+        .highlight-box {
+            background: rgba(232, 185, 35, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box.blue {
+            border-left-color: #3498db;
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .highlight-box.yellow {
+            border-left-color: var(--primary-color);
+            background: rgba(232, 185, 35, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight-box i {
+            margin-right: 0.8rem;
+            width: 1.2rem;
+            text-align: center;
+        }
+
+        /* Link Box Styles */
+        .link-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .link-box a {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'EB Garamond', serif;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid var(--primary-color);
+        }
+
+        .link-box a:hover {
+            background: transparent;
+            color: var(--primary-color);
+        }
+
+        /* Health Exam Details */
+        .health-exam-details {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .exam-type {
+            flex: 1;
+            background: rgba(10, 17, 40, 0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(232, 185, 35, 0.1);
+        }
+
+        .exam-type h5 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Registration Steps */
+        .registration-steps {
+            background: rgba(10, 17, 40, 0.3);
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .registration-steps h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .registration-steps ol {
+            padding-left: 1.5rem;
+            margin: 0;
+        }
+
+        .registration-steps li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Payment Notes */
+        .payment-notes {
+            background: rgba(10, 17, 40, 0.3);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .payment-notes p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .payment-notes i {
+            margin-right: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        /* Note Style */
+        .note {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .note i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--secondary-color), var(--dark-bg));
+            padding: 3rem 2.5rem;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M30,30 Q50,10 70,30 T90,30" fill="none" stroke="rgba(232,185,35,0.05)" stroke-width="1"/></svg>');
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--light-text);
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons a {
+            color: var(--light-text);
+            font-size: 2.2rem;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+        }
+
+        .social-icons a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(232, 185, 35, 0.1);
+            transform: scale(0);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+            transform: translateY(-5px) scale(1.1);
+            text-shadow: 0 0 15px var(--primary-color);
+        }
+
+        .social-icons a:hover::before {
+            transform: scale(1);
+            background: rgba(232, 185, 35, 0.2);
+        }
+
+        .footer-copyright {
+            font-family: 'EB Garamond', serif;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 1px;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: var(--light-text);
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .scroll-indicator.visible {
+            opacity: 1;
+        }
+
+        /* Animations */
+        @keyframes shimmer {
+            0% { box-shadow: 0 0 10px rgba(232, 185, 35, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(232, 185, 35, 0.7); }
+            100% { box-shadow: 0 0 10px rgba(232, 185, 35, 0.3); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes pulseText {
+            0% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 4px 10px rgba(0, 0, 0, 0.4); }
+            50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 6px 15px rgba(0, 0, 0, 0.5); }
+            100% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 4px 10px rgba(0, 0, 0, 0.4); }
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.3; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .quote-text {
+                font-size: 2.8rem;
+            }
+            .quote-author {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.8rem 1.5rem;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                background: linear-gradient(135deg, rgba(10, 17, 40, 0.98), rgba(27, 38, 59, 0.98));
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                height: calc(100vh - 70px);
+                justify-content: center;
+                align-items: center;
+                backdrop-filter: blur(15px);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links li {
+                margin: 1.5rem 0;
+            }
+            .nav-links a {
+                font-size: 1.5rem;
+                padding: 0.8rem 1.5rem;
+            }
+            .nav-toggle {
+                display: flex;
+            }
+            .quote-text {
+                font-size: 2.2rem;
+                padding: 0 1rem;
+            }
+            .quote-author {
+                font-size: 1.2rem;
+            }
+            .quote-box {
+                padding: 1.5rem;
+                border-radius: 10px;
+            }
+            .social-icons a {
+                font-size: 1.8rem;
+                width: 50px;
+                height: 50px;
+            }
+            .student-ticker {
+                padding: 0.8rem 1.5rem;
+                top: 70px;
+            }
+            .ticker-content {
+                font-size: 0.9rem;
+                animation: ticker-scroll 40s linear infinite;
+            }
+            .navbar.scrolled ~ .student-ticker {
+                top: 60px;
+            }
+            .health-exam-details {
+                flex-direction: column;
+            }
+            .exam-type {
+                width: 100%;
+            }
+            .ai-input {
+                flex-direction: column;
+            }
+            .ai-input input {
+                border-radius: 5px;
+                margin-bottom: 0.5rem;
+            }
+            .ai-input button {
+                border-radius: 5px;
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                height: 60px;
+                padding: 0.5rem 1rem;
+            }
+            .nav-logo img {
+                height: 30px;
+            }
+            .logo-text {
+                font-size: 1.4rem;
+            }
+            .nav-links {
+                top: 60px;
+                height: calc(100vh - 60px);
+            }
+            .quote-text {
+                font-size: 1.8rem;
+                line-height: 1.4;
+            }
+            .quote-author {
+                font-size: 1rem;
+            }
+            .footer-text {
+                font-size: 1.1rem;
+            }
+            .social-icons {
+                gap: 1.5rem;
+            }
+            .social-icons a {
+                font-size: 1.6rem;
+                width: 45px;
+                height: 45px;
+            }
+            .student-ticker {
+                padding: 0.6rem 1rem;
+                top: 60px;
+            }
+            .ticker-content {
+                font-size: 0.8rem;
+                animation: ticker-scroll 30s linear infinite;
+            }
+            .ticker-close {
+                font-size: 1rem;
+                width: 25px;
+                height: 25px;
+            }
+            .info-section {
+                padding: 3rem 1rem;
+            }
+            .accordion-header {
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+            .box-header, .box-content {
+                padding: 1rem;
+            }
+            .highlight-box {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-logo">
-            <img src="./IMAGES/NTU LOGO.png" alt="NTU" loading="lazy" />
-            <span class="ntu-text">NTU</span>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-logo">
+                <img src="./IMAGES/NTU LOGO.png" alt="NTU Logo" loading="lazy" />
+                <span class="logo-text">NTU</span>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="Scholarship.html">Scholarship</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="Study_NTU.html">Study NTU</a></li>
+                <li><a href="Coursework.html">Coursework</a></li>
+                <li><a href="Jobs.html">Jobs</a></li>
+                <li><a href="Internship.html">Internship</a></li>
+                <li><a href="Companies.html">Companies</a></li>
+                <li><a href="OtherLinks.html">Other Links</a></li>
+            </ul>
+        </nav>
+        <div class="student-ticker" id="studentTicker">
+            <div class="ticker-content">
+                <span class="ticker-label">Student ID:</span> R14K43034 • 
+                <span class="ticker-label">Department:</span> Master Program for Semiconductor Device, Material, and Hetero-integration • 
+                <span class="ticker-label">Password:</span> a20030906
+            </div>
+            <button class="ticker-close" aria-label="Close ticker">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div class="nav-toggle" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#HOME" class="active" aria-current="page">Home</a></li>
-            <li><a href="#SCHOLARSHIP">Scholarship</a></li>
-            <li><a href="#NEWS">News</a></li>
-            <li><a href="#COURSEWORKS">Courseworks</a></li>
-            <li><a href="#OIA">OIA</a></li>
-            <li><a href="#JOBS">Jobs</a></li>
-            <li><a href="#INTERNSHIPS">Internships</a></li>
-            <li><a href="#STUDYPORTAL">Study Portal</a></li>
-            <li><a href="#OPPORTUNITIES">Opportunities</a></li>
-            <li><a href="#LINKS">Links</a></li>
-        </ul>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero-image" id="HOME">
+    <section class="hero-image" id="HOME" aria-label="Hero section with inspirational quote">
         <div class="hero-overlay"></div>
-        <img src="./IMAGES/TONY STARK.jpg" alt="National Taiwan University campus view" loading="lazy" />
-        <!-- Renamed TONY STARK.jpg to NTU_CAMPUS.jpg; update filename accordingly -->
-        <div class="float-left"></div>
-        <div class="float-right"></div>
+        <div class="hero-stars"></div>
+        <div class="particles" id="particles"></div>
+        <img src="./IMAGES/SPACE.jpg" alt="Cosmic view of space" loading="eager" />
         <div class="quote-box">
             <h1 class="quote-text">
-                “Success is not final, failure is not fatal:<br>
-                It is the courage to continue that counts”
+                "Success is not final, failure is not fatal:<br>
+                Courage defines the journey"
             </h1>
-            <p class="quote-author">— Winston Churchill</p>
+            <p class="quote-author">Winston Churchill</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Scholarship Section -->
-    <section class="content-section" id="SCHOLARSHIP">
-        <h2>🎓 Scholarship Opportunities</h2>
-        <p>
-            National Taiwan University offers a number of scholarship programs for international students to support their academic journey.
-        </p>
-        <div class="accordion">
-            <!-- Outstanding International Graduate Student Scholarship -->
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-1">
-                    Outstanding International Graduate Student Scholarship
-                </button>
-                <div class="accordion-content" id="scholarship-1">
-                    <p><strong>Requirements:</strong> All students applying to our international graduate degree programs can apply. We recommend contacting your potential supervisor regarding scholarship possibilities.</p>
-                    <p><strong>Benefits:</strong></p>
-                    <ul>
-                        <li>Tuition subsidy of up to TWD 65,000 (USD 2,167) each semester</li>
-                        <li>Monthly stipend:</li>
-                        <li>Master’s: TWD 8,000 (USD 267)</li>
-                        <li>PhD: TWD 10,000+ (USD 333+) – College of Liberal Arts, Social Sciences, Law, Management</li>
-                        <li>PhD: TWD 15,000+ (USD 500+) – College of Science, Engineering, Medicine, Bio-Resources & Agriculture, Electrical Engineering & Computer Science, Public Health, Life Science</li>
-                        <li><a href="https://i.ntu.edu.tw/" target="_blank" rel="noopener">International College</a> – Visit for scholarship and stipend information</li>
-                        <li>Graduate School of Advanced Technology – Admitted students will receive scholarship and stipend information via email</li>
+    <section class="info-section" aria-label="NTU Student Information">
+        <div class="container">
+            <div class="ai-assistant">
+                <div class="ai-header">
+                    <i class="fas fa-robot"></i>
+                    <h3>NTU Deadline Assistant</h3>
+                </div>
+                <div class="ai-content">
+                    <p>Hello! I'll help you track important dates and deadlines. Here's what's coming up:</p>
+                    <ul class="deadline-list">
+                        <li><strong>July 23, 2025</strong> - Orientation Meet & Greet Application Deadline</li>
+                        <li><strong>August 5, 2025</strong> - Orientation Meet & Greet Session</li>
+                        <li><strong>August 7-29, 2025</strong> - Online Registration Period</li>
+                        <li><strong>August 25, 2025</strong> - Campus Tour</li>
+                        <li><strong>August 27-28, 2025</strong> - NTU Orientation Camp</li>
+                        <li><strong>August 29, 2025</strong> - Health Exam Deadline</li>
                     </ul>
-                    <p><strong>Note:</strong> Each semester, tuition fees of up to TWD 65,000 (USD 2,167) will be waived, excluding administrative fees, thesis advisor’s fees, insurance, accommodation, internet service, credit fees, and other such fees, which recipients must cover.</p>
-                    <p><strong>Maximum Duration:</strong></p>
-                    <ul>
-                        <li>Master’s students: ≤ 2 years</li>
-                        <li>PhD students: ≤ 4 years</li>
-                    </ul>
-                    <p><strong>Requirements for Renewal:</strong> College committees review the recipient’s performance each academic year to determine eligibility.</p>
-                    <p><strong>How to Apply:</strong> Check the scholarship application box in the degree online application system. No extra documents or procedures required.</p>
+                    <div class="ai-input">
+                        <input type="date" id="deadline-check" placeholder="Check what's due by...">
+                        <button onclick="checkDeadlines()">Check</button>
+                    </div>
+                    <div id="deadline-result" class="deadline-result"></div>
                 </div>
             </div>
 
-            <!-- National Science and Technology Council (NSTC) Allocation Graduate Research Fellowship -->
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-2">
-                    National Science and Technology Council (NSTC) Allocation Graduate Research Fellowship (PhD)
-                </button>
-                <div class="accordion-content" id="scholarship-2">
-                    <p><strong>Requirements:</strong> All students applying to our international doctoral programs can apply.</p>
-                    <p><strong>Benefits:</strong> Monthly stipend of TWD 40,000 (USD 1,333).</p>
-                    <p><strong>Maximum Duration:</strong> Up to 3 years.</p>
-                    <p><strong>Requirements for Renewal:</strong> Submit a complete report to the scholarship renewal committee by June each academic year, including academic performance, achievements, participation in international activities, and other relevant documents.</p>
-                    <p><strong>How to Apply:</strong> Check the scholarship application box in the degree online application system. No extra documents or procedures required.</p>
-                    <p><strong>Note:</strong> Only available for September entry. Recipients who defer admission will have their scholarship revoked.</p>
-                </div>
+            <div class="info-accordion">
+                <div class="accordion-item">
+    <button class="accordion-header">
+        <i class="fas fa-home"></i> Accommodation Application
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="accordion-content">
+        <p>Types of Accommodation available:</p>
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-hotel"></i> NTU Prince House
             </div>
-
-            <!-- NTU Loyalty Award for Overseas Degree Students -->
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-3">
-                    NTU Loyalty Award for Overseas Degree Students
-                </button>
-                <div class="accordion-content" id="scholarship-3">
-                    <p><strong>Requirements:</strong> Current NTU international/overseas Chinese students admitted into a higher degree program upon graduation. Bachelor’s students must be in the top half of their class the semester before application.</p>
-                    <p><strong>Award:</strong></p>
-                    <ul>
-                        <li>Master’s Programs: TWD 100,000 (USD 3,333)</li>
-                        <li>PhD Programs: TWD 200,000 (USD 6,666)</li>
-                    </ul>
-                    <p><strong>Provision:</strong> TWD 50,000 (USD 1,666) released each semester from the 2nd semester onward until the total amount is awarded.</p>
-                    <p><strong>Renewal:</strong> Academic performance reviewed by the relevant college committee each academic year.</p>
-                    <p><strong>How to Apply:</strong> Wait for OIA’s announcement.</p>
-                    <p><strong>Note:</strong> Students may receive this award alongside other NTU scholarships. Awardees are not restricted from receiving additional scholarships from the government or other organizations unless specified.</p>
-                </div>
+            <div class="box-content">
+                <p><strong>Single Suite:</strong> TWD 38,655 per semester (4.5 months)</p>
+                <p><strong>Twin Suite:</strong> TWD 25,290 per semester (4.5 months)</p>
             </div>
-
-            <!-- MOE Taiwan Scholarship -->
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-4">
-                    MOE Taiwan Scholarship
-                </button>
-                <div class="accordion-content" id="scholarship-4">
-                    <p><strong>Requirements:</strong> Nationalities from countries not in the scope of the MOFA Taiwan Scholarship.</p>
-                    <p><strong>Benefits:</strong></p>
-                    <ul>
-                        <li>Tuition waiver of up to TWD 40,000 each semester</li>
-                        <li>Monthly stipend of TWD 20,000</li>
-                    </ul>
-                    <p><strong>Maximum Duration:</strong></p>
-                    <ul>
-                        <li>Master’s students: ≤ 2 years</li>
-                        <li>PhD students: ≤ 4 years</li>
-                    </ul>
-                    <p><strong>Application Procedures and Requirements for Renewal:</strong> Contact <a href="https://taiwanscholarship.moe.gov.tw/web/pages.aspx?p=7" target="_blank" rel="noopener">Taiwan Scholarship and Huayu Enrichment Scholarship Program Office</a> for further details.</p>
-                </div>
+        </div>
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-building"></i> NTU General Dorms
             </div>
-
-            <!-- Elite Scholarship Program -->
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-5">
-                    Elite Scholarship Program
-                </button>
-                <div class="accordion-content" id="scholarship-5">
-                    <p><strong>Requirements:</strong> Current lecturers from South East Asia or Africa pursuing a master’s degree or PhD in Taiwan.</p>
-                    <p><strong>Benefits:</strong> Monthly stipend of TWD 25,000 (USD 833).</p>
-                    <p><strong>Maximum Duration:</strong></p>
-                    <ul>
-                        <li>Master’s students: ≤ 2 years</li>
-                        <li>PhD students: ≤ 3 years</li>
-                    </ul>
-                    <p><strong>How to Apply:</strong> Contact the department/graduate institute before submitting your admission application. NTU will nominate qualified applicants to MOE for further selection.</p>
-                    <p><strong>Guidelines:</strong></p>
-                    <ul>
-                        <li><a href="#" target="_blank" rel="noopener">Overview</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">South and Southeast Asia</a></li>
-                        <li><a href="#" target="_blank" rel="noopener">Africa</a></li>
-                        <!-- Placeholder links; update with actual URLs -->
-                    </ul>
-                </div>
+            <div class="box-content">
+                <p>Accommodation fee: TWD 7,900-12,900 per semester (4.5 months)</p>
+                <p><strong>Contact:</strong> Miss Lin - <a href="mailto:shihmei1206@ntu.edu.tw">shihmei1206@ntu.edu.tw</a></p>
             </div>
-
-            <!-- NSTC Graduate Research Fellowship (NSTC-GRF) Pilot Program -->
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-6">
-                    NSTC Graduate Research Fellowship (NSTC-GRF) Pilot Program
-                </button>
-                <div class="accordion-content" id="scholarship-6">
-                    <p><strong>Requirements:</strong> Students applying to our doctoral programs (Mainland Chinese, Hong Kong, and Macao students are not eligible).</p>
-                    <p><strong>Benefits:</strong> TWD 40,000 (USD 1,333) per month.</p>
-                    <p><strong>Maximum Duration:</strong> ≤ 3 years.</p>
-                    <p><strong>How to Apply:</strong> <a href="#" target="_blank" rel="noopener">Learn more about the NSTC Graduate Research Fellowship (NSTC-GRF) Pilot Program</a>.</p>
-                    <!-- Placeholder link; update with actual URL -->
-                </div>
+        </div>
+        <div class="highlight-box yellow">
+            <p><strong>My Dorm Result:</strong>  NTU General Dorms</p>
+        </div>
+        
+        <!-- Dormitory Links Section -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-link"></i> Dormitory Resources
             </div>
-
-            <!-- Taiwan ICDF Scholarship -->
-            <div class="accordion-item">
-                <button class="accordion-header" aria-expanded="false" aria-controls="scholarship-7">
-                    Taiwan ICDF Scholarship
-                </button>
-                <div class="accordion-content" id="scholarship-7">
-                    <p><strong>Requirements:</strong> Nationality from eligible countries, program in Agricultural Economics.</p>
-                    <p><strong>Benefits:</strong></p>
-                    <ul>
-                        <li>Return airfare (economy class)</li>
-                        <li>Tuition fees and credit fees</li>
-                        <li>Housing (dormitory at NTU)</li>
-                        <li>Monthly allowance: TWD 18,000 (Master’s) or TWD 20,000 (PhD)</li>
-                        <li>Insurance</li>
-                        <li>Textbook costs</li>
-                    </ul>
-                    <p><strong>Maximum Duration:</strong> 2 years.</p>
-                    <p><strong>How to Apply:</strong> <a href="https://www.icdf.org.tw/" target="_blank" rel="noopener">Apply through TaiwanICDF</a>.</p>
+            <div class="box-content">
+                <div class="link-box">
+                    <a href="https://osa_dorm.ntu.edu.tw/en" target="_blank" class="popup-link">NTU Dormitory Portal</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/stablestudyguide" target="_blank" class="popup-link">Subsidary for Dormitory</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/AboutUs/ResidentDirectors" target="_blank" class="popup-link">Resident Directors</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/AboutUs/DormInformation/Dorm_Information" target="_blank" class="popup-link">Dormitory Information</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/AboutUs/Staff" target="_blank" class="popup-link">Contact Staff</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/AboutUs/DormInformation/Accessible_Facilities" target="_blank" class="popup-link">Accessible Facilities</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/AboutUs/DormInformation/PlatformofChangingAccomodation" target="_blank" class="popup-link">Changing Accommodation</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/AboutUs/DormInformation/Dorm_Addresses" target="_blank" class="popup-link">Dorm Addresses & Mail</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/AboutUs/StudentLeaders" target="_blank" class="popup-link">Student Leaders</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/AboutUs/NetworkManagementAssistants" target="_blank" class="popup-link">Network Assistants</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/DormApplicationWithdrawExchange/DormApplication" target="_blank" class="popup-link">Dorm Application</a>
+                    <a href="https://housing.ntu.edu.tw/?lang=en" target="_blank" class="popup-link">Student Housing News</a>
+                    <a href="https://osa_dorm.ntu.edu.tw/en/calendar/index" target="_blank" class="popup-link">NTU Dorm Calendar</a>
                 </div>
             </div>
         </div>
-        <a href="https://admissions.ntu.edu.tw/fees-scholarships/scholarships/" target="_blank" class="btn" rel="noopener">Scholarship Portal</a>
+
+        <!-- Additional Dormitory Information -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-info-circle"></i> Important Notes
+            </div>
+            <div class="box-content">
+                <p><strong>NTU General Dorms include:</strong></p>
+                <ul>
+                    <li>Prince House (Single/Twin Suite)</li>
+                    <li>Shui-Yuan Dormitory</li>
+                    <li>Ching-Hsing Dormitory</li>
+                    <li>Chia-Hsing Dormitory</li>
+                </ul>
+                <p>Facilities typically include: WiFi, laundry, common rooms, and 24/7 security.</p>
+                <p>Check the dormitory portal for specific amenities in your assigned dorm.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <i class="fas fa-hands-helping"></i> Student Volunteer
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>NTU provides student volunteers to help with administrative procedures and campus life adjustment.</p>
+                        <div class="info-box">
+                            <div class="box-header">
+                                <i class="fas fa-user"></i> Your Assigned Volunteer
+                            </div>
+                            <div class="box-content">
+                                <p><strong>Chinese Name:</strong> 王鼎中</p>
+                                <p><strong>English Name:</strong> WANG TING CHUNG</p>
+                                <p><strong>Gender:</strong> Male</p>
+                                <p><strong>Email:</strong> <a href="mailto:B10502046@ntu.edu.tw">B10502046@ntu.edu.tw</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="accordion-item">
+    <button class="accordion-header">
+        <i class="fas fa-users"></i> Orientation for New International Students
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="accordion-content">
+        <!-- NTU Global Student Meet & Greet -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-handshake"></i> NTU Global Student Meet & Greet
+            </div>
+            <div class="box-content">
+                <p>Get in touch with experienced international students who will share their experiences and give course selection tips.</p>
+                <div class="highlight-box blue">
+                    <h4>2025 September Entry NTU Global Students Online Meet & Greet</h4>
+                    <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> August 5, 2025 (Tuesday)</p>
+                    <p><i class="fas fa-clock"></i> <strong>Session 2:</strong> 3:00 PM – 5:00 PM (Taipei Time)</p>
+                    <p><i class="fas fa-globe-asia"></i> <strong>For students from:</strong> Europe, UK, India, Indonesia, Israel, Nepal, Philippines, Thailand, Vietnam, Ethiopia, Nigeria, Tanzania</p>
+                    <p><i class="fas fa-hourglass-end"></i> <strong>Registration Deadline:</strong> July 23, 2025</p>
+                    <p>Topics covered will include:</p>
+                    <ul>
+                        <li>Starting a New Journey at NTU and in Taiwan</li>
+                        <li>Studying at NTU</li>
+                        <li>Activities You Can Join</li>
+                        <li>Living in Taiwan</li>
+                    </ul>
+                    <div class="link-box">
+                        <a href="#" class="popup-link">Application Form</a>
+                    </div>
+                    <p><i class="fas fa-envelope"></i> <strong>Contact:</strong> Ms. Lily Hsu - <a href="mailto:lilyhsup87@ntu.edu.tw">lilyhsup87@ntu.edu.tw</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campus Tour -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-map-marked-alt"></i> Campus Tour
+            </div>
+            <div class="box-content">
+                <p>Explore the campus with current NTU international and local student guides who will share important tips about life at NTU.</p>
+                
+                <div class="highlight-box">
+                    <h4>Campus Tour Sessions</h4>
+                    <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> August 25, 2025</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Meeting Point:</strong> NTU Main Gate</p>
+                    
+                    <div class="registration-steps">
+                        <h5>Tour Session Times:</h5>
+                        <ul>
+                            <li><strong>Session 1:</strong> 8:30-10:00 am (arrive before 8:10)</li>
+                            <li><strong>Session 2:</strong> 10:30 am-12:00 pm (arrive before 10:10)</li>
+                            <li><strong>Session 3:</strong> 13:30-15:00 pm (arrive before 13:10)</li>
+                        </ul>
+                        <p class="note"><i class="fas fa-info-circle"></i> Content is the same for all sessions</p>
+                    </div>
+                    
+                    <div class="link-box">
+                        <a href="https://map.ntu.edu.tw/index.html?layer=build&uid=AT2004-F&scale=18" target="_blank" class="popup-link">NTU Campus Map</a>
+                        <a href="https://isss.ntu.edu.tw/academics/orientation-activities/" target="_blank" class="popup-link">More Orientation Information</a>
+                    </div>
+                </div>
+                
+                <div class="highlight-box yellow">
+                    <h4>NTU Main Gate Orientation Session</h4>
+                    <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> August 27, 2025</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Boya Lecture Building</p>
+                    <p><i class="fas fa-door-open"></i> <strong>Rooms:</strong> 101 (Session A), 102 (Session B), 103 (Session C), 101 (Session D)</p>
+                    <p><i class="fas fa-exclamation-circle"></i> <strong>Important:</strong> All incoming international students must attend their assigned session</p>
+                    <p>The finalized schedule with your assigned session will be emailed to you.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- NTU Orientation Camp -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-campground"></i> NTU Orientation Camp
+            </div>
+            <div class="box-content">
+                <p>First-year Student Orientation Camp helps new students become acquainted with campus information through various interactive activities.</p>
+                <div class="highlight-box yellow">
+                    <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> Aug.27-Aug.28, 2025</p>
+                    <p><i class="fas fa-clock"></i> <strong>Time:</strong> 10:00 AM to 4:00 PM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong></p>
+                    <ul>
+                        <li>Aug.27 - Putong Lecture Building (Real Escape activities)</li>
+                        <li>Aug.28 - Sports Center (Music Festival 1F, Club Market 3F)</li>
+                    </ul>
+                    <div class="link-box">
+                        <a href="https://ntuorientation.com/" target="_blank" class="popup-link">Orientation Camp Website</a>
+                        <a href="https://reurl.cc/K9KoQe" target="_blank" class="popup-link">Online Registration Form</a>
+                    </div>
+                    <p><i class="fas fa-phone"></i> <strong>Contact:</strong> +886-02-3366-2063~66 #12</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ntu.osa.oc@gmail.com">ntu.osa.oc@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- General Chinese Courses -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-language"></i> General Chinese Courses
+            </div>
+            <div class="box-content">
+                <p>All incoming international students interested in taking Chinese courses must complete registration and attend the placement test.</p>
+                
+                <div class="highlight-box blue">
+                    <h4>Placement Test Information</h4>
+                    <p><i class="fas fa-calendar-alt"></i> <strong>Date:</strong> August 30, 2025</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Xinsheng Lecture Building (specific classroom will be emailed in August)</p>
+                    <p><i class="fas fa-clock"></i> <strong>Duration:</strong> 1 to 1.5 hours</p>
+                    
+                    <div class="payment-notes">
+                        <p><i class="fas fa-exclamation-triangle"></i> <strong>Important:</strong></p>
+                        <ul>
+                            <li>Punctuality is crucial - late arrivals will have enrollment canceled</li>
+                            <li>Complete beginners are exempt from the test</li>
+                            <li>Test determines your appropriate class level</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-box">
+                        <a href="https://isss.ntu.edu.tw/academics/learning-chinese/" target="_blank" class="popup-link">Chinese Course Information</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ARC -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-id-card"></i> Alien Resident Certificate (ARC)
+            </div>
+            <div class="box-content">
+                <p>The Alien Resident Certificate (ARC) serves as an ID card which proves legal resident status in Taiwan.</p>
+                <div class="highlight-box">
+                    <p><i class="fas fa-exclamation-circle"></i> <strong>Important:</strong> Must apply within 30 days after arrival</p>
+                    <div class="link-box">
+                        <a href="https://isss.ntu.edu.tw/campus-life/visa-arc/" target="_blank" class="popup-link">ARC Information</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- National Health Insurance -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-heartbeat"></i> National Health Insurance
+            </div>
+            <div class="box-content">
+                <p>Following Taiwan government regulations, international students must register for health insurance during their stay in Taiwan.</p>
+                <div class="highlight-box blue">
+                    <h4>Requirements for NHI Registration:</h4>
+                    <p>Students staying in Taiwan with a valid ARC for over six months continuously must enroll in National Health Insurance (NHI).</p>
+                    <p><i class="fas fa-money-bill-wave"></i> <strong>Payment:</strong> NTD 826 per month (NTD 4,956 per semester)</p>
+                    <div class="link-box">
+                        <a href="https://isss.ntu.edu.tw/wellbeing/insurance/" target="_blank" class="popup-link">Insurance Information</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="accordion-item">
+    <button class="accordion-header">
+        <i class="fas fa-laptop"></i> Online Registration Information
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="accordion-content">
+        <div class="highlight-box blue">
+            <p><i class="fas fa-calendar-alt"></i> <strong>Registration Period:</strong> August 7 to 29, 2025</p>
+            <div class="link-box">
+                <a href="https://web2.cc.ntu.edu.tw/p/s/login2/p1.php" target="_blank" class="popup-link">Online Registration System</a>
+                <a href="https://isss.ntu.edu.tw/academics/registration/" target="_blank" class="popup-link">Registration Information</a>
+            </div>
+        </div>
+
+        <div class="registration-steps">
+            <h4>Registration Process:</h4>
+            <ol>
+                <li>Log in with your NTU Student ID (available from August 7)</li>
+                <li>Activate your NTU Student ID account</li>
+                <li>Follow the procedure on the website</li>
+                <li>Upload necessary documents</li>
+                <li>Check document approval status</li>
+                <li>Collect student ID from designated location after August 25</li>
+            </ol>
+        </div>
+
+        <!-- Step I: Declaration Form -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-file-signature"></i> Step I: International Student Declaration Form
+            </div>
+            <div class="box-content">
+                <p>Download, sign, and upload the declaration form to the Online Registration System.</p>
+                <div class="highlight-box">
+                    <p><i class="fas fa-exclamation-circle"></i> <strong>Note:</strong> Chinese version prevails in case of discrepancy</p>
+                    <div class="link-box">
+                        <a href="https://my.ntu.edu.tw/StudentPass/Home/Index" target="_blank" class="popup-link">Online Registration System</a>
+                        <a href="https://oiasystem.ntu.edu.tw/ntu_oia_survey/survey/survey/download.declaration" target="_blank" class="popup-link">Download Declaration Form</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step II: Emergency Contact -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-phone-alt"></i> Step II: Emergency Contact Information
+            </div>
+            <div class="box-content">
+                <p>Provide details for 2 emergency contacts (1 from your country and 1 local contact in Taiwan not affiliated with NTU).</p>
+                <div class="link-box">
+                    <a href="https://oiasystem.ntu.edu.tw/ntu_oia_survey/survey/survey/stage.third" target="_blank" class="popup-link">Emergency Contact Portal</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step III: Personal Information -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-user-edit"></i> Step III: Personal Information
+            </div>
+            <div class="box-content">
+                <p>Complete your personal information in the Advisee System starting August 7, 2025.</p>
+                <div class="link-box">
+                    <a href="https://my.ntu.edu.tw/stuinfo/" target="_blank" class="popup-link">Personal Information System</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step IV: Health Exam -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-medkit"></i> Step IV: Health Exam
+            </div>
+            <div class="box-content">
+                <p><strong>Deadline:</strong> August 29, 2025</p>
+                <div class="health-exam-details">
+                    <div class="exam-type">
+                        <h5>Master/PhD Students:</h5>
+                        <p><i class="fas fa-calendar-alt"></i> May 29 to August 29, 2025</p>
+                        <p><i class="fas fa-map-marker-alt"></i> NTU Hospital (Fee: TWD 900)</p>
+                        <p><i class="fas fa-user-nurse"></i> Contact: Nurse Yu-Hsien Ho</p>
+                        <p><i class="fas fa-envelope"></i> hoyuhsien@ntu.edu.tw</p>
+                        <p><i class="fas fa-phone"></i> 02-3366-2169</p>
+                        <div class="link-box">
+                            <a href="https://reurl.cc/dQM8VM" target="_blank" class="popup-link">Appointment Link</a>
+                            <a href="#" target="_blank" class="popup-link">Health Exam Form</a>
+                            <a href="#" target="_blank" class="popup-link">Health Exam Instructions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight-box yellow">
+                    <p><i class="fas fa-exclamation-triangle"></i> <strong>Important:</strong> Upload completed health exam report to the Online Registration System</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step V: Physical Assessment -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-brain"></i> Step V: Physical Assessment Survey
+            </div>
+            <div class="box-content">
+                <p>Complete the online Physical and Mental Health Assessment Survey during the registration period (August 7-29).</p>
+                <div class="link-box">
+                    <a href="https://bodypsychk1.scc.osa.ntu.edu.tw/sso.do" target="_blank" class="popup-link">Survey Link</a>
+                </div>
+                <p class="note"><i class="fas fa-info-circle"></i> Language can be changed at the upper right corner after login</p>
+            </div>
+        </div>
+
+        <!-- Step VI: Tuition Payment -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-money-bill-wave"></i> Step VI: Tuition Payment
+            </div>
+            <div class="box-content">
+                <p>Pay tuition fees and upload payment confirmation to the Online Registration System.</p>
+                <div class="payment-notes">
+                    <p><i class="fas fa-credit-card"></i> <strong>Credit Card:</strong> Shows as "Payment Completed" after 1-2 weeks</p>
+                    <p><i class="fas fa-money-bill-alt"></i> <strong>Cash at Post Office:</strong> Shows as "Payment Completed" after 1-2 days</p>
+                    <p><i class="fas fa-exclamation-triangle"></i> Failed credit card payments require 24-hour wait before retrying</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student ID Collection -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-id-card"></i> Student ID Collection
+            </div>
+            <div class="box-content">
+                <div class="registration-steps">
+                    <h5>Collection Schedule (08:30-12:00 and 13:30-17:00):</h5>
+                    <table>
+                        <tr>
+                            <th>Degree</th>
+                            <th>College</th>
+                            <th>Date</th>
+                            <th>Venue</th>
+                        </tr>
+                        <tr>
+                            <td>Masters/PhDs</td>
+                            <td>Medicine/Public Health</td>
+                            <td>August 25 or after Sept 1</td>
+                            <td>College of Medicine OAA branch</td>
+                        </tr>
+                        <tr>
+                            <td>Masters/PhDs</td>
+                            <td>Other Colleges</td>
+                            <td>August 25 or September 1</td>
+                            <td>Zonghe Lecture Building 1F</td>
+                        </tr>
+                        <tr>
+                            <td>Masters/PhDs</td>
+                            <td>Other Colleges</td>
+                            <td>After September 2</td>
+                            <td>OAA Graduate Division</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="highlight-box">
+                    <h5>Certificate of Enrollment:</h5>
+                    <p>Available through myNTU → Students → NTU ePortfolio → Grade Inquiry → Certificate of Enrollment</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verified Documents -->
+        <div class="info-box">
+            <div class="box-header">
+                <i class="fas fa-file-certificate"></i> Verified Graduation Certificate & Transcripts
+            </div>
+            <div class="box-content">
+                <p>Upload verified documents to the Online Registration System by August 29, 2025.</p>
+                <div class="link-box">
+                    <a href="https://my.ntu.edu.tw/StudentPass/Home/Index" target="_blank" class="popup-link">Upload Documents</a>
+                </div>
+                <p class="note"><i class="fas fa-exclamation-triangle"></i> Verification may take over 2 months - start early!</p>
+            </div>
+        </div>
+    </div>
+</div>
     </section>
 
-    <!-- News Section -->
-    <section class="content-section" id="NEWS">
-        <h2>📰 Latest News</h2>
-        <p>
-            Stay updated with the latest happenings at NTU, from research breakthroughs to campus events.
-        </p>
-        <ul>
-            <li><strong>NTU Ranks Top in Asia:</strong> NTU continues to lead in academic excellence in 2025.</li>
-            <li><strong>New Research Center:</strong> AI and Sustainability Research Center opens this year.</li>
-            <li><strong>Campus Events:</strong> Annual cultural festival scheduled for Spring 2025.</li>
-        </ul>
-        <a href="https://www.ntu.edu.tw/english/" target="_blank" class="btn" rel="noopener">Read More News</a>
-    </section>
-
-    <!-- Courseworks Section -->
-    <section class="content-section" id="COURSEWORKS">
-        <h2>📚 Courseworks</h2>
-        <p>
-            Explore NTU’s diverse academic programs designed to foster innovation and critical thinking.
-        </p>
-        <ul>
-            <li><strong>Computer Science:</strong> Cutting-edge curriculum in AI, machine learning, and data science.</li>
-            <li><strong>Business Administration:</strong> Programs focusing on global business trends.</li>
-            <li><strong>Environmental Studies:</strong> Interdisciplinary courses on sustainability.</li>
-        </ul>
-        <a href="https://www.ntu.edu.tw/english/academics/academics.html" target="_blank" class="btn" rel="noopener">Explore Courses</a>
-    </section>
-
-    <!-- OIA Section -->
-    <section class="content-section" id="OIA">
-        <h2>🌍 Office of International Affairs</h2>
-        <p>
-            The OIA supports international students with visa assistance, exchange programs, and cultural integration.
-        </p>
-        <ul>
-            <li><strong>Visa Support:</strong> Guidance on student visa applications and renewals.</li>
-            <li><strong>Exchange Programs:</strong> Study abroad with partner universities.</li>
-            <li><strong>Cultural Events:</strong> Engage with Taiwanese culture through workshops.</li>
-        </ul>
-        <a href="https://oia.ntu.edu.tw/en/" target="_blank" class="btn" rel="noopener">Visit OIA</a>
-    </section>
-
-    <!-- Jobs Section -->
-    <section class="content-section" id="JOBS">
-        <h2>💼 Job Opportunities</h2>
-        <p>
-            Discover career opportunities for students and alumni through NTU’s career services.
-        </p>
-        <ul>
-            <li><strong>Teaching Assistants:</strong> Support faculty with grading and tutoring.</li>
-            <li><strong>Research Assistants:</strong> Work on innovative projects with professors.</li>
-            <li><strong>Industry Internships:</strong> Connect with top companies via NTU’s career center.</li>
-        </ul>
-        <a href="https://www.ntu.edu.tw/english/career/career.html" target="_blank" class="btn" rel="noopener">Find Jobs</a>
-    </section>
-
-    <!-- Internships Section -->
-    <section class="content-section" id="INTERNSHIPS">
-        <h2>🔬 Internships</h2>
-        <p>
-            Gain hands-on experience through internships with NTU’s industry and research partners.
-        </p>
-        <ul>
-            <li><strong>Tech Internships:</strong> Work with leading tech firms in Taiwan and beyond.</li>
-            <li><strong>Research Internships:</strong> Participate in groundbreaking research at NTU labs.</li>
-            <li><strong>Global Internships:</strong> Opportunities through international partnerships.</li>
-        </ul>
-        <a href="https://oia.ntu.edu.tw/en/internship" target="_blank" class="btn" rel="noopener">Explore Internships</a>
-    </section>
-
-    <!-- Study Portal Section -->
-    <section class="content-section" id="STUDYPORTAL">
-        <h2>📖 Study Portal</h2>
-        <p>
-            Access course materials, grades, and academic resources through NTU’s online portal.
-        </p>
-        <ul>
-            <li><strong>Course Registration:</strong> Easily register for courses each semester.</li>
-            <li><strong>Learning Resources:</strong> Access lecture notes, videos, and assignments.</li>
-            <li><strong>Academic Records:</strong> View grades and transcripts securely.</li>
-        </ul>
-        <a href="https://www.ntu.edu.tw/english/students/students.html" target="_blank" class="btn" rel="noopener">Access Study Portal</a>
-    </section>
-
-    <!-- Opportunities Section -->
-    <section class="content-section" id="OPPORTUNITIES">
-        <h2>🌟 Additional Opportunities</h2>
-        <p>
-            Engage in extracurricular activities, student organizations, and leadership programs.
-        </p>
-        <ul>
-            <li><strong>Student Clubs:</strong> Join over 200 clubs, from arts to technology.</li>
-            <li><strong>Volunteer Programs:</strong> Contribute to community service initiatives.</li>
-            <li><strong>Leadership Workshops:</strong> Develop skills through NTU’s programs.</li>
-        </ul>
-        <a href="https://www.ntu.edu.tw/english/student-life/student-life.html" target="_blank" class="btn" rel="noopener">Discover Opportunities</a>
-    </section>
-
-    <!-- Links Section -->
-    <section class="content-section" id="LINKS">
-        <h2>🔗 Useful Links</h2>
-        <p>
-            Quick access to important NTU resources and external links.
-        </p>
-        <ul>
-            <li><a href="https://www.ntu.edu.tw/english/" target="_blank" rel="noopener">NTU Official Website</a></li>
-            <li><a href="https://oia.ntu.edu.tw/en/" target="_blank" rel="noopener">Office of International Affairs</a></li>
-            <li><a href="https://www.lib.ntu.edu.tw/en" target="_blank" rel="noopener">NTU Library</a></li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="footer-content">
-            <div class="footer-social">
-                <!-- Updated with NTU-specific social media links; verify and adjust as needed -->
-                <a href="mailto:secretariat@ntu.edu.tw" target="_blank" rel="noopener" aria-label="Email NTU"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/school/national-taiwan-university/" target="_blank" rel="noopener" aria-label="NTU LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/NTU" target="_blank" rel="noopener" aria-label="NTU GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.facebook.com/ntu.edu.tw" target="_blank" rel="noopener" aria-label="NTU Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="https://line.me" target="_blank" rel="noopener" aria-label="NTU Line"><i class="fab fa-line"></i></a>
-                <a href="https://www.whatsapp.com" target="_blank" rel="noopener" aria-label="NTU WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <p class="footer-text">National Taiwan University</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/arunodhayan-sivakumar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto: arunodhayans08@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/qr/K4X5GWSMQAX6L1" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/16vw5r7cCn/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://line.me/ti/p/shbgKHWq6_" target="_blank" aria-label="Line"><i class="fab fa-line"></i></a>
+                <a href="https://x.com/arunodhayan_s?s=08" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
-            <div class="footer-contact">
-                <form id="contact-form" action="#" method="post">
-                    <!-- Added action="#" assuming JS handles submission -->
-                    <label for="email" class="visually-hidden">Your Email</label>
-                    <input type="email" id="email" placeholder="Your Email" required aria-label="Email address" />
-                    <button type="submit">Contact Us</button>
-                </form>
-            </div>
+            <p class="footer-copyright">2025 © National Taiwan University, All Rights Reserved</p>
         </div>
-        <p id="copyright">© <span id="current-year">2025</span> National Taiwan University. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navigation Bar Toggle
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const navbar = document.querySelector('.navbar');
+
+            navToggle.addEventListener('click', () => {
+                const isExpanded = navLinks.classList.toggle('active');
+                navToggle.classList.toggle('active');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+                document.body.style.overflow = isExpanded ? 'hidden' : '';
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+            });
+
+            // Student Ticker Functionality
+            const studentTicker = document.getElementById('studentTicker');
+            const closeTicker = document.querySelector('.ticker-close');
+
+            if (studentTicker) {
+                setTimeout(() => {
+                    studentTicker.classList.add('hidden');
+                }, 120000);
+
+                closeTicker.addEventListener('click', () => {
+                    studentTicker.classList.add('hidden');
+                });
+
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        studentTicker.style.top = '60px';
+                    } else {
+                        studentTicker.style.top = '70px';
+                    }
+                });
+            }
+
+            // Quote Animation
+            const quoteBox = document.querySelector('.quote-box');
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        quoteBox.classList.add('visible');
+                        setTimeout(() => scrollIndicator.classList.add('visible'), 1500);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            if (quoteBox) observer.observe(quoteBox);
+
+            // Parallax Hero Effect
+            window.addEventListener('scroll', () => {
+                const heroImage = document.querySelector('.hero-image img');
+                if (heroImage) {
+                    heroImage.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+                }
+            });
+
+            // Scroll to bottom
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', () => {
+                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                });
+            }
+
+            // Floating Particles
+            const particlesContainer = document.getElementById('particles');
+            if (particlesContainer) {
+                for (let i = 0; i < 30; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    const size = Math.random() * 5 + 2;
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    particle.style.left = `${Math.random() * 100}%`;
+                    particle.style.top = `${Math.random() * 100}%`;
+                    particle.style.animationDelay = `${Math.random() * 10}s`;
+                    particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                    particle.style.opacity = Math.random() * 0.5 + 0.3;
+                    particlesContainer.appendChild(particle);
+                }
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Lazy loading for images
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const image = entry.target;
+                            image.src = image.dataset.src || image.src;
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                }, { rootMargin: '200px' });
+
+                lazyImages.forEach(image => {
+                    imageObserver.observe(image);
+                });
+            }
+
+            // Accordion functionality
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const accordionItem = header.parentElement;
+                    const accordionContent = header.nextElementSibling;
+                    
+                    header.classList.toggle('active');
+                    accordionContent.classList.toggle('open');
+                    
+                    document.querySelectorAll('.accordion-item').forEach(item => {
+                        if (item !== accordionItem && item.querySelector('.accordion-content').classList.contains('open')) {
+                            item.querySelector('.accordion-content').classList.remove('open');
+                            item.querySelector('.accordion-header').classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // AI Deadline Checker
+            window.checkDeadlines = function() {
+                const dateInput = document.getElementById('deadline-check');
+                const resultDiv = document.getElementById('deadline-result');
+                
+                if (!dateInput.value) {
+                    resultDiv.innerHTML = '<p>Please select a date to check deadlines.</p>';
+                    resultDiv.style.display = 'block';
+                    return;
+                }
+                
+                const selectedDate = new Date(dateInput.value);
+                const deadlines = [
+                    { date: new Date('2025-07-23'), title: 'Orientation Meet & Greet Application Deadline', link: '' },
+                    { date: new Date('2025-08-05'), title: 'Orientation Meet & Greet Session', link: '' },
+                    { date: new Date('2025-08-07'), title: 'Online Registration Period Starts', link: 'https://web2.cc.ntu.edu.tw/p/s/login2/p1.php' },
+                    { date: new Date('2025-08-25'), title: 'Campus Tour', link: 'https://map.ntu.edu.tw/index.html?layer=build&uid=AT2004-F&scale=18' },
+                    { date: new Date('2025-08-27'), title: 'NTU Orientation Camp Day 1', link: 'https://ntuorientation.com/' },
+                    { date: new Date('2025-08-28'), title: 'NTU Orientation Camp Day 2', link: 'https://ntuorientation.com/' },
+                    { date: new Date('2025-08-29'), title: 'Health Exam Deadline & Registration Ends', link: 'https://my.ntu.edu.tw/StudentPass/Home/Index' },
+                    { date: new Date('2025-08-30'), title: 'Chinese Course Placement Test', link: 'https://isss.ntu.edu.tw/academics/learning-chinese/' }
+                ];
+                
+                const upcomingDeadlines = deadlines.filter(deadline => deadline.date <= selectedDate);
+                
+                if (upcomingDeadlines.length === 0) {
+                    resultDiv.innerHTML = '<p>No deadlines before the selected date.</p>';
+                } else {
+                    let html = '<p>Deadlines before or on ' + selectedDate.toDateString() + ':</p><ul>';
+                    upcomingDeadlines.forEach(deadline => {
+                        html += '<li>';
+                        html += '<strong>' + deadline.title + '</strong>';
+                        html += ' - ' + deadline.date.toDateString();
+                        if (deadline.link) {
+                            html += ' <a href="' + deadline.link + '" target="_blank" style="color: var(--primary-color);">(More Info)</a>';
+                        }
+                        html += '</li>';
+                    });
+                    html += '</ul>';
+                    resultDiv.innerHTML = html;
+                }
+                
+                resultDiv.style.display = 'block';
+            };
+
+            // Initialize first accordion as open
+            document.querySelector('.accordion-header').click();
+        });
+    </script>
 </body>
 </html>
